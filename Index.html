@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macrame 3D Adventure</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game">
+
+        <div id="loading">
+            Loading 3D game...
+        </div>
+<div id="score">
+    🪙 Coins: 0
+</div>
+        <div id="controls">
+            <button id="left">◀</button>
+            <button id="right">▶</button>
+            <button id="jump">⬆</button>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+    <script>
+        if (typeof THREE === "undefined") {
+
+            document.getElementById("loading").innerText =
+                "Three.js could not load. Check your internet connection.";
+
+        } else {
+
+            const script = document.createElement("script");
+
+            script.src = "game.js";
+
+            document.body.appendChild(script);
+        }j
+    </script>
+
+</body>
+
+</html>
